@@ -1,0 +1,19 @@
+<div class="container">
+  <nav class="navbar navbar-dark" style="background-color: #8ad188;">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link" routerLink="">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about">О сайте</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about/page1">Дочерний роут page1</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about/page2">Дочерний роут page2</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="nav-link" routerLink="/login">Войти</a>
+      </form>
+  </nav>
+  <div class="row mt-1">
+      <div class="col-sm">
+        <router-outlet (onInitCmp)="onInitCmp($event)"></router-outlet>
+      </div>
+      <div class="col-sm">{{msg}}</div>
+  </div>
+</div>
